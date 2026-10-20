@@ -1,0 +1,275 @@
+.content-container {
+    display: flex;
+    gap: 20px;
+    padding: 5px;
+    width: 100%;
+}
+
+main a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #6B7280;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+main a:hover {
+    background-color: #4B5563;
+}
+
+
+.columna-izquierda {
+    flex: 1;
+    display: block;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.columna-derecha {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: visible; 
+}
+
+
+h3 {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+    color: #343A40;
+}
+
+
+.form-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #343A40;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+input[type="submit"] {
+    background-color: #6B7280;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #4B5563;
+}
+
+
+.resultados {
+    margin-top: 5px;
+    background-color: #fff;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+}
+
+
+.tabla-container {
+    flex-grow: 1;
+    width: 100%;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.registros {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.registros th,
+.registros td {
+    border: 1px solid #D1D5DB;
+    padding: 6px;
+    text-align: left;
+}
+
+.registros th {
+    background-color: #9CA3AF;
+    color: #FFFFFF;
+}
+
+
+.horarios-disponibles {
+    width: 100%;
+    height: 30vh; 
+    overflow-y: auto; 
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    gap: 10px; 
+}
+
+.columna-horarios {
+    width: 48%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.columna-horarios strong {
+    text-align: center;
+    margin-bottom: 5px; 
+    font-weight: bold;
+}
+
+.horario-label {
+    padding-right: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; 
+    font-size: 16px;
+
+}
+
+.horario-radio {
+    padding-right: 150px; 
+}
+
+
+.history-link {
+    font-size: 10px;
+    background-color: #FFC107;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.history-link:hover {
+    text-decoration: underline;
+}
+
+.registros .confirm-link {
+    font-size: 12px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #28A745;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-right: 5px;
+    transition: background 0.3s;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.registros .confirm-link:hover {
+    background-color: #1F8137;
+    text-decoration: none;
+}
+
+.registros .reprogramar-link {
+    font-size: 12px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-right: 5px;
+    transition: background 0.3s;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.registros .reprogramar-link:hover {
+    background-color: #357ABD;
+    text-decoration: none;
+}
+
+.registros .delete-link {
+    font-size: 12px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #DC3545;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-right: 5px;
+    transition: background 0.3s;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.registros .delete-link:hover {
+    background-color: #B02A37;
+    text-decoration: none;
+}
+
+
+
+.button {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin-top: 10px; 
+    background-color: #6B7280;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    align-self: center; 
+}
+
+.button:hover {
+    background-color: #4B5563;
+}
+
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .columna-izquierda,
+    .columna-derecha {
+        flex: 1 0 100%;
+        width: 100%;
+    }
+
+    .registros,
+    .horarios-disponibles {
+        max-height: 30vh;
+    }
+
+    .horarios-disponibles {
+        flex-direction: column; 
+    }
+
+    .columna-horarios {
+        width: 100%; 
+    }
+}

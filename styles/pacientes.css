@@ -1,0 +1,414 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #EAF1F5; /* Gris azulado claro */
+    color: #343A40; /* Gris oscuro para texto */
+height:100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 110px;
+background-color: #023047;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye los elementos al inicio y al final */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    height: 60px;
+    background: radial-gradient(ellipse closest-side,#219EBC 1%,#023047);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+header .radio {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el título y el audio */
+}
+
+header .radio-title {
+    font-size: 0.9em; /* Tamaño más pequeño para el texto de la radio */
+    color: #FFFFFF;
+}
+
+header .logo:hover {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+    transition: ease 0.3s;
+}
+
+header img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 1.2em;
+    color: #FFFFFF;
+}
+
+/* Navegación */
+nav {
+    width: 180px;
+    height: auto;
+    padding: 20px 8px;
+background-color: #023047;
+   
+}
+
+nav a {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #A3BFFA; /* Azul claro suave */
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #343A40;
+    margin-bottom: 4vh;
+    width: 160px;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #7F9CF5; /* Azul más vibrante pero suave */
+}
+
+/* Main */
+main {
+    
+flex:1;
+    width: calc(100% - 180px); /* Ancho restante menos el nav */
+    padding: 10px;
+    min-height: calc(100vh - 140px); /* Ajustado para dejar espacio al footer */
+}
+
+main section > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+main section a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #6B7280; /* Gris azulado */
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+main section a:hover {
+    background-color: #4B5563; /* Gris más oscuro */
+}
+
+main section form {
+    display: flex;
+    align-items: center;
+}
+
+main section input {
+    width: 260px;
+    padding: 8px;
+    border: 1px solid #D1D5DB;
+    border-radius: 5px 0 0 5px;
+}
+
+main section button {
+    padding: 8px 12px;
+    background-color: #6B7280; /* Gris azulado */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+main section button:hover {
+    background-color: #4B5563;
+}
+
+/* Contenedor de la tabla con desplazamiento */
+main section > div:last-child {
+    width: 100%;
+    overflow-x: auto; /* Mantenemos el desplazamiento horizontal si es necesario */
+    max-height: 60vh; /* Altura máxima relativa a la ventana */
+    overflow-y: auto; /* Barra de desplazamiento vertical cuando sea necesario */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+thead tr {
+    background-color: #9CA3AF; /* Gris medio */
+}
+
+thead th {
+    padding: 10px;
+    color: #FFFFFF;
+    border: 1px solid #6B7280;
+    white-space: nowrap;
+}
+
+tbody tr {
+    background-color: #F9FAFB; /* Blanco grisáceo */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #E5E7EB; /* Gris muy claro */
+}
+
+tbody td {
+    padding: 10px;
+    border: 1px solid #D1D5DB;
+    white-space: nowrap;
+}
+
+/* Estilos específicos para los botones en la tabla */
+tbody td a:nth-child(1) { /* Editar */
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #4A90E2; /* Azul */
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-right: 5px;
+    transition: background 0.3s;
+}
+
+tbody td a:nth-child(1):hover { /* Editar hover */
+    background-color: #357ABD;
+}
+
+tbody td a:nth-child(2) { /* Eliminar */
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #DC3545; /* Rojo */
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-right: 5px;
+    transition: background 0.3s;
+}
+
+tbody td a:nth-child(2):hover { /* Eliminar hover */
+    background-color: #B02A37;
+}
+
+tbody td a:nth-child(3) { /* Historial */
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #FFC107; /* Amarillo */
+    color: #343A40; /* Negro */
+    border-radius: 5px;
+    margin-right: 5px;
+    transition: background 0.3s;
+}
+
+tbody td a:nth-child(3):hover { /* Historial hover */
+    background-color: #D39E00;
+}
+
+tbody td a:nth-child(4) { /* Odontograma */
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #28A745; /* Verde */
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-right: 5px;
+    transition: background 0.3s;
+}
+
+tbody td a:nth-child(4):hover { /* Odontograma hover */
+    background-color: #1F8137;
+}
+
+main p {
+    text-align: center;
+    padding: 10px;
+    color: #6B7280;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    align-items: center; /* Ajustado para centrar verticalmente */
+    justify-content: center;
+    
+    bottom: 0;
+background-color: #023047;
+    width: 100%;
+    height: 30px;
+    color: white;
+}
+
+/* Media Queries para diseño responsive */
+@media (max-width: 1024px) {
+    nav {
+        width: 150px; /* Reducido ligeramente */
+    }
+
+    main {
+        width: calc(100% - 150px);
+    }
+
+    header h1 {
+        font-size: 1em;
+    }
+
+    nav a {
+        font-size: 1em;
+        padding: 12px 15px;
+        width: 130px; /* Ajustado para pantallas más pequeñas */
+        margin-bottom: 1.5vh; /* Separación proporcional */
+    }
+
+    main section > div:last-child {
+        max-height: 50vh; /* Ajuste para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        flex-direction: column; /* Apila los elementos verticalmente en pantallas pequeñas */
+        height: auto;
+    }
+
+    header .logo {
+        max-width: 100%;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    header .radio {
+        margin-top: 10px;
+    }
+
+    header img {
+        width: 40px;
+    }
+
+    header h1 {
+        font-size: 0.9em;
+    }
+
+    nav {
+        width: 120px; /* Más estrecho para móviles */
+    }
+
+    main {
+        width: calc(100% - 120px);
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 0.9em;
+        padding: 10px 15px;
+        width: 100px; /* Más compacto */
+        margin-bottom: 1vh; /* Separación proporcional */
+    }
+
+    main section > div:first-child {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main section input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    main section button {
+        padding: 8px 10px;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    main section > div:last-child {
+        max-height: 45vh; /* Más compacto */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px;
+    }
+
+    header .logo {
+        height: 50px;
+    }
+
+    header img {
+        width: 30px;
+    }
+
+    header h1 {
+        font-size: 0.8em;
+    }
+
+    nav {
+        width: 100px; /* Muy estrecho para móviles pequeños */
+    }
+
+    main {
+        width: calc(100% - 100px);
+    }
+
+    nav a {
+        font-size: 0.8em;
+        padding: 8px 10px;
+        width: 80px; /* Compacto */
+        margin-bottom: 0.8vh; /* Separación proporcional */
+    }
+
+    main section a {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+
+    main section input {
+        max-width: 100%;
+    }
+
+    table {
+        font-size: 0.8em;
+    }
+
+    tbody td a {
+        padding: 3px 6px;
+        margin-right: 2px;
+        font-size: 0.8em;
+    }
+
+    main section > div:last-child {
+        max-height: 40vh; /* Más compacto aún */
+    }
+}
